@@ -1,6 +1,5 @@
 # VSCODE DARKMODE EXTENSION
 
-# [install extension](vscode:extension/granddaleTech.theme)
 
 
 ### vscode extension for change theme related to time. Cool Huh !
@@ -32,3 +31,5 @@
 ## [twitter](https://twitter.com/KccEnes)
 
 ## [github](https://github.com/AhmetEnesKCC)
+
+# [install extension](https://marketplace.visualstudio.com/items?itemName=granddaleTech.theme)
