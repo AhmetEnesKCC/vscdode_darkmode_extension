@@ -1,7 +1,24 @@
+## 0.0.9
+
+- Fixed performance
+
+- Minor Optimizations
+
+- Added 2 new command
+
+| command        | function              |
+| -------------- | --------------------- |
+| stop darkmode  | Stop changing themes  |
+| start darkmode | Start changing themes |
+
+---
+
 ## 0.0.8
 
 - Fixed links.
 - Deleted unnessecary commands.
+
+---
 
 ## 0.0.2
 
