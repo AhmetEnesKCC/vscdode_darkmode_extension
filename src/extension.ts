@@ -35,13 +35,16 @@ setInterval(() => {
 // Pop Up
 
 let messages = ["https://twitter.com/KccEnes"];
+
 vscode.window
   .showInformationMessage(
     "Thank You for installed vscode dark mode. Do you have any idea ? Feel free to contact with me",
     ...messages
   )
   .then((selection) => {
-    vscode.env.openExternal(vscode.Uri.parse("https://twitter.com/KccEnes"));
+    if (selection === "https://twitter.com/KccEnes") {
+      vscode.env.openExternal(vscode.Uri.parse("https://twitter.com/KccEnes"));
+    }
   });
 
 // this method is called when your extension is activated

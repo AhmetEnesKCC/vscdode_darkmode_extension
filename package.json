@@ -2,7 +2,7 @@
   "name": "theme",
   "displayName": "VSCODE DARKMODE",
   "description": "change vs code theme related to time ",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "vscode": "^1.48.0"
   },
@@ -11,6 +11,7 @@
   "categories": [
     "Visualization"
   ],
+  "repository": {},
   "activationEvents": [
     "onStartupFinished"
   ],
@@ -52,11 +53,7 @@
         }
       }
     },
-    "commands": [
-      {
-        "title": "Hello World"
-      }
-    ]
+    "commands": []
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",

@@ -1,11 +1,16 @@
-###
+## 0.0.8
+
+- Fixed links.
+- Deleted unnessecary commands.
+
+## 0.0.2
 
 added 1 new configuration for time
 
 ```json
 {
-  "vscode_darkmode.day": number, // finish of day time
-  "vscode_darkmode.night": number //finish of night time
+  "vscode_darkmode.day": number, // start of day time
+  "vscode_darkmode.night": number // start of night time
 }
 ```
 

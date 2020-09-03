@@ -1,5 +1,7 @@
 # VSCODE DARKMODE EXTENSION
 
+![](https://github.com/AhmetEnesKCC/vscdode_darkmode_extension/blob/master/info_gif.gif?raw=true)
+
 ### vscode extension for change theme related to time. Cool Huh !
 
 ## Options
