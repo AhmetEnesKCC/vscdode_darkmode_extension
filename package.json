@@ -2,7 +2,7 @@
   "name": "theme",
   "displayName": "VSCODE DARKMODE",
   "description": "change vs code theme related to time ",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "engines": {
     "vscode": "^1.48.0"
   },
@@ -12,7 +12,7 @@
     "Visualization"
   ],
   "activationEvents": [
-    "onCommand:vscodeDarkmode.Dark"
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -54,7 +54,6 @@
     },
     "commands": [
       {
-        "command": "theme.helloWorld",
         "title": "Hello World"
       }
     ]

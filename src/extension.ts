@@ -13,7 +13,25 @@ let getThemes = vscode.workspace.getConfiguration("workspace").inspect("colorThe
 console.log(getThemes);
 
 // Detect Time Cahnging in every 10 seconds
+setInterval(() => {
+  selectedDarkTheme = vscode.workspace.getConfiguration("vscode_darkmode").get("dark");
+  selectedLightTheme = vscode.workspace.getConfiguration("vscode_darkmode").get("light");
+  selectedTimeDay = vscode.workspace.getConfiguration("vscode_darkmode").get("day");
+  selectedTimeNight = vscode.workspace.getConfiguration("vscode_darkmode").get("night");
 
+  clock = new Date().getHours();
+  if (selectedTimeDay !== undefined && selectedTimeNight !== undefined) {
+    if ((24 >= clock && clock > selectedTimeNight) || (clock >= 0 && selectedTimeDay > clock)) {
+      configuration
+        .update("colorTheme", selectedDarkTheme, vscode.ConfigurationTarget.Global)
+        .then((a) => console.log("Changed Theme"));
+    } else if (clock <= selectedTimeNight && clock > selectedTimeDay) {
+      configuration
+        .update("colorTheme", selectedLightTheme, vscode.ConfigurationTarget.Global)
+        .then((a) => console.log("Changed Theme"));
+    }
+  }
+}, 1000);
 // Pop Up
 
 let messages = ["https://twitter.com/KccEnes"];
@@ -67,30 +85,7 @@ export function activate(context: vscode.ExtensionContext) {
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
-
-  context.subscriptions.push(vscode.commands.registerCommand(darkModeCommand, darkModeCommandHandler));
-  context.subscriptions.push(vscode.commands.registerCommand(darkModeCommand, darkModeCommandHandler));
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {
-  setInterval(() => {
-    selectedDarkTheme = vscode.workspace.getConfiguration("vscode_darkmode").get("dark");
-    selectedLightTheme = vscode.workspace.getConfiguration("vscode_darkmode").get("light");
-    selectedTimeDay = vscode.workspace.getConfiguration("vscode_darkmode").get("day");
-    selectedTimeNight = vscode.workspace.getConfiguration("vscode_darkmode").get("night");
-
-    clock = new Date().getHours();
-    if (selectedTimeDay !== undefined && selectedTimeNight !== undefined) {
-      if ((24 >= clock && clock > selectedTimeNight) || (clock >= 0 && selectedTimeDay > clock)) {
-        configuration
-          .update("colorTheme", selectedDarkTheme, vscode.ConfigurationTarget.Global)
-          .then((a) => console.log("Changed Theme"));
-      } else if (clock <= selectedTimeNight && clock > selectedTimeDay) {
-        configuration
-          .update("colorTheme", selectedLightTheme, vscode.ConfigurationTarget.Global)
-          .then((a) => console.log("Changed Theme"));
-      }
-    }
-  }, 1000);
-}
+export function deactivate() {}

@@ -9,4 +9,5 @@ added 1 new configuration for time
 }
 ```
 
-- Fixed starting without commnand issues
+- Fixed starting without commnand issues.
+- Added Gif for more detailed instruction.

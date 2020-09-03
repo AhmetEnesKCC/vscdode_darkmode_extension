@@ -29,5 +29,3 @@
 ## [twitter](https://twitter.com/KccEnes)
 
 ## [github](https://github.com/AhmetEnesKCC)
-
-# [install extension](vscode:extension/granddaleTech.theme)
