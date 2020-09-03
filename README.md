@@ -32,4 +32,4 @@
 
 ## [github](https://github.com/AhmetEnesKCC)
 
-# [install extension](vscode:extension/granddaleTech.theme)
+# [install extension](https://marketplace.visualstudio.com/items?itemName=granddaleTech.theme)
