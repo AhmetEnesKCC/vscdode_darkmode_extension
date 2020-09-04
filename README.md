@@ -10,7 +10,9 @@
 
 ### Light : "vscode_darkmode.light" : "theme_name" > string
 
-### Time : "vscode_darkmode.time" : time > number
+### Day Time : "vscode_darkmode.day" : time > number
+
+### Night Time : "vscode_darkmode.day" : time > number
 
 ## EXAMPLE USAGE
 
@@ -18,11 +20,10 @@
 // settings.json
 
 {
-  ...
   "vscode_darkmode.dark": "Visual Studio Dark",
   "vscode_darkmode.light": "Visual Studio Light",
-  "vscode_darkmode.day": 12, // define day finish time
-  "vscode_darkmode.night": 12 // define night finish time
+  "vscode_darkmode.day": 12, // define day start time
+  "vscode_darkmode.night": 12 // define night start time
 }
 ```
 

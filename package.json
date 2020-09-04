@@ -2,10 +2,11 @@
   "name": "theme",
   "displayName": "VSCODE DARKMODE",
   "description": "change vs code theme related to time ",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.48.0"
   },
+  
   "publisher": "granddaleTech",
   "icon": "vscode_darkmode_extension.png",
   "categories": [
@@ -53,7 +54,16 @@
         }
       }
     },
-    "commands": []
+    "commands": [
+      {
+        "command": "vscode_darkmode.stop",
+        "title": "stop darkmode"
+      },
+      {
+        "command": "vscode_darkmode.start",
+        "title": "start darkmode"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
@@ -80,6 +90,8 @@
     "vscode-test": "^1.4.0"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "open": "^7.2.1",
     "vsce": "^1.79.5"
   }
 }
