@@ -6,7 +6,7 @@
   "engines": {
     "vscode": "^1.48.0"
   },
-  
+  "license": "MIT",
   "publisher": "granddaleTech",
   "icon": "vscode_darkmode_extension.png",
   "categories": [
